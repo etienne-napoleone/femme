@@ -12,13 +12,13 @@
 pub use log::LevelFilter;
 
 #[cfg(not(target_arch = "wasm32"))]
-mod ndjson;
+pub mod ndjson;
 
 #[cfg(not(target_arch = "wasm32"))]
-mod pretty;
+pub mod pretty;
 
 #[cfg(target_arch = "wasm32")]
-mod wasm;
+pub mod wasm;
 
 /// Starts logging depending on current environment.
 ///
